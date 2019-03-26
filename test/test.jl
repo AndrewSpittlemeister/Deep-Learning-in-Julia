@@ -1,11 +1,12 @@
 push!(LOAD_PATH, pwd() * "/../src")
 
-using Layers, Activations, Evaluations
+using Layers, Evaluations, Losses
 
-model = Layers.initInput(10)
-model = Layers.initDense(model, 5, Layers.sigmoid)
-model = Layers.initDense(model, 5, Layers.softmax)
-Evaluations.predict!(model, ones(10))
+model = initInput(10)
+model = initDense(model, 5, "sigmoid")
+model = initDense(model, 5, "softmax")
+predict!(model, ones(10))
 
-println(model.output)
-println(sum(model.output))
+println(model.ȳ)
+println(sum(model.ȳ))
+println(evaluate!(model, ones(10), ones(5), mse))

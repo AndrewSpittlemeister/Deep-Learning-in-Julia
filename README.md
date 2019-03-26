@@ -11,6 +11,8 @@ This is a personal project that just happens to be public. Like most of my perso
 - [x] Dense & Input layers
 - [x] Basic activation functions (linear, relu, sigmoid, softmax)
 - [x] Forward propagation 
+- [x] Loss functions & Evaluation
+- [x] Activation & Loss function derivatives
 - [ ] Back-propagation algorithm & training
 - [ ] Dropout Layers
 - [ ] Other things I haven't thought of yet
